@@ -26,7 +26,7 @@ while cap.isOpened():
         mask = cv2.bitwise_not(mask)
         ## all thing not red
         part2 = cv2.bitwise_and(frame,frame,mask=mask)
-        cv2.imshow("mask", part2)
+        cv2.imshow("cloak", part1+part2)
         if cv2.waitKey(5) == ord('q'):
             # save the image
             # cv2.imwrite('image.jpg', back)
